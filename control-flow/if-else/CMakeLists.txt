@@ -1,13 +1,21 @@
 cmake_minimum_required(VERSION 3.14)
 
+if(FALSE)
+	message("if false block executed")
+elseif(TRUE)
+	message("elseif true block executed")
+else()
+	message("else block executed")
+endif()
+
 set(FOO OFF)
 
 set(BAR FOO)
 
 if(${BAR})
-	message("if block executed")
+	message("BAR: if block executed")
 else()
-	message("else block executed")
+	message("BAR: else block executed")
 endif()
 
 
