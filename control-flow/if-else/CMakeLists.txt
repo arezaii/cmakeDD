@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.14)
+
+set(FOO OFF)
+
+set(BAR FOO)
+
+if(${BAR})
+	message("if block executed")
+else()
+	message("else block executed")
+endif()
+
+
+if(DEFINED FOO)
+	message("FOO: if block executed")
+else()
+	message("FOO: else block executed")
+endif()
+
+
+if(DEFINED BAZ)
+	message("BAZ: if block executed")
+else()
+	message("BAZ: else block executed")
+endif()
+
+
+if(EXISTS CMakeLists.txt)
+	message("CMakeLists.txt exists")
+else()
+	message("CMakeLists.txt not found")
+endif()
