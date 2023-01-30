@@ -1,0 +1,11 @@
+# Scope and functions
+
+The scope of the variables is local to the function. If you modify a variable inside a function, the change is not visible outside the function.
+
+However, using the PARENT_SCOPE keyword, you can modify a variable that was declared in the parent scope.
+
+### Running
+
+```
+cmake -P CMakeLists.txt
+```
