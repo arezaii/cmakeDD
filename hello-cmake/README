@@ -1,0 +1,17 @@
+# Hello CMake Demo
+
+This will demonstrate how to use CMake to build a simple C++ project.
+
+## Prerequisites
+
+* CMake 3.14 or later
+* A C++ compiler
+
+
+## Build and Run
+
+```
+cmake -B build-dir .
+cmake --build build-dir
+./build-dir/hello
+```
