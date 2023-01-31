@@ -11,3 +11,12 @@ endfunction()
 message("Outside: before function call: ${Name}")
 print_name()
 message("Outside: after function call: ${Name}")
+
+
+function(mutate varName)
+  SET(${varName} ${varName}${${varName}}${${varName}} PARENT_SCOPE)
+endfunction()
+
+SET(arg "foo")
+mutate(arg)
+MESSAGE(${arg})
