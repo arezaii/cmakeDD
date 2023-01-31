@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-## WHile
+## While
 
 set(FOO a)
 # could append another 'a' with the following command, repeat it N times...
