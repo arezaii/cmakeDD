@@ -9,8 +9,14 @@ else()
 endif()
 
 set(FOO OFF)
-
 set(BAR FOO)
+
+if(DEFINED FOO)
+	message("FOO: if block executed")
+	set(BIZ FOO)
+else()
+	message("FOO: else block executed")
+endif()
 
 if(${BAR})
 	message("BAR: if block executed")
@@ -18,20 +24,17 @@ else()
 	message("BAR: else block executed")
 endif()
 
-
-if(DEFINED FOO)
-	message("FOO: if block executed")
-else()
-	message("FOO: else block executed")
-endif()
-
-
 if(DEFINED BAZ)
 	message("BAZ: if block executed")
 else()
 	message("BAZ: else block executed")
 endif()
 
+if(DEFINED BIZ)
+message("BIZ: if block executed")
+else()
+	message("BIZ: else block executed")
+endif()
 
 if(EXISTS CMakeLists.txt)
 	message("CMakeLists.txt exists")

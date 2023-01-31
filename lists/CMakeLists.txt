@@ -39,12 +39,12 @@ message( "sub_list2: ${sub_list2}" )
 message( "str_list: ${str_list}" )
 message( "find_var: ${find_var}" )
 
+# a list of lists
 set(list_of_lists a b c)
 set(a 1 2 3)
 set(b 4;5;6)
 set(c "7;8;9")
-
-
+# be sure to double-dereference the items!
 foreach(list_name IN LISTS list_of_lists)
   foreach(value IN LISTS ${list_name})
     message(${value})
