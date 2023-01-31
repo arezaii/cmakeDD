@@ -6,7 +6,7 @@ See function-scope/README
 
 ## Directory Scope
 
-Variables declared in a scope can be edited in a subdirectory scope using the PARENT_SCOPE keyword,
+Variables declared in a scope can be affected by a subdirectory scope using the PARENT_SCOPE keyword,
 however, the variable change will only affect the parent scope. The current scope and any grand-parent
 scopes will not be affected.
 

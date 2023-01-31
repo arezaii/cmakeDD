@@ -3,6 +3,7 @@ set(MY_LIST cmake;is neat)
 message("the list contains ${MY_LIST}")
 
 set(FOO a b c;d "e;f" 2.7 "Hello There")
+message( ${FOO} )
 
 list(APPEND FOO 4.2 XX)
 message( ${FOO} )
@@ -38,3 +39,14 @@ message( "sub_list2: ${sub_list2}" )
 message( "str_list: ${str_list}" )
 message( "find_var: ${find_var}" )
 
+set(list_of_lists a b c)
+set(a 1 2 3)
+set(b 4;5;6)
+set(c "7;8;9")
+
+
+foreach(list_name IN LISTS list_of_lists)
+  foreach(value IN LISTS ${list_name})
+    message(${value})
+  endforeach()
+endforeach()

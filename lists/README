@@ -1,0 +1,24 @@
+# Lists
+
+CMake lists are really just semicolon `;` separated strings. For this reason it is important not
+to use semicolons in your values. If you do, you will need to escape them with a backslash `\`.
+
+## Creating lists
+
+Lists can be created in a few different ways:
+
+```cmake
+set(my_list "one;two;three")
+set(my_list "one" "two" "three")
+set(my_list "one;two" "three")
+```
+
+## Accessing list elements
+Lists can be accessed using the `list` command:
+
+```cmake
+list(GET my_list 0) # one
+list(GET my_list 1) # two
+list(GET my_list 2) # three
+```
+

@@ -1,0 +1,25 @@
+# Functions
+
+CMake functions are defined using the function() command and terminated with endfunction().
+Functions introduce their own scope and do not return values in CMake.
+
+## Function Arguments
+
+CMake functions can take arguments. Arguments are copied into the scope so changing their
+values will not affect the parent scope. To modify a variable in the parent scope, use the
+PARENT_SCOPE keyword.
+
+### Dereferencing Arguments
+
+Care must be taken when dereferencing arguments. If you dereference an argument that was itself a variable, you will get the name of the variable, not the value.
+
+### Optional Arguments
+
+Optional arguments can be specified by using the variable `ARGVN` where `N` is the argument number. Other special variables exist to get the total number of arguments (`ARGC`), the list of all arguments (`ARGV`), and the list of all optional arguments (`ARGN`).
+
+## Function Names
+
+Redefining a function with the same name will overwrite the previous definition. The previous
+definition will be available as _function_name_OLD.
+
+Only the immediate previous definition is available.
