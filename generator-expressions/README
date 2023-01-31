@@ -1,0 +1,14 @@
+# Generator Expressions
+
+Generator expressions are evaluated at build time and are used to conditionally add compilation options to
+a target depending on the compiler being used, build version (debug or release), or other build properties.
+
+## Running the example
+
+From the generator-expressions directory (this directory):
+
+```
+cmake -B build-dir .
+cmake --build build-dir --target print
+```
+
