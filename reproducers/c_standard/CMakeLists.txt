@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.15)
-cmake_policy(SET CMP0128 NEW)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 project(hello-cmake CXX)
 add_executable(hello hello.cpp)
